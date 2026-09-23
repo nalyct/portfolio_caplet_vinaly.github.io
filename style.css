@@ -1,3 +1,7 @@
+/* =========================
+   STYLE GÉNÉRAL
+========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,12 +14,14 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #0f1117;
-    color: white;
+    background-color: #faf8fc;
+    color: #302a35;
 }
 
 
-/* Navigation */
+/* =========================
+   NAVIGATION
+========================= */
 
 nav {
     position: fixed;
@@ -29,12 +35,17 @@ nav {
 
     padding: 0 8%;
 
-    background-color: #0f1117;
+    background-color: rgba(250, 248, 252, 0.92);
+
+    border-bottom: 1px solid #eee7f4;
+
+    z-index: 1000;
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
+    color: #6f568a;
 }
 
 nav ul {
@@ -44,16 +55,20 @@ nav ul {
 }
 
 nav a {
-    color: white;
+    color: #4b4252;
     text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    color: #7c5cff;
+    color: #9b7ebd;
 }
 
 
-/* Accueil */
+/* =========================
+   ACCUEIL
+========================= */
 
 .accueil {
     min-height: 100vh;
@@ -61,7 +76,15 @@ nav a:hover {
     display: flex;
     align-items: center;
 
-    padding: 100px 10%;
+    padding: 120px 10%;
+
+    background:
+        radial-gradient(
+            circle at 85% 30%,
+            #e8ddf5 0%,
+            transparent 30%
+        ),
+        #faf8fc;
 }
 
 .accueil-contenu {
@@ -69,74 +92,175 @@ nav a:hover {
 }
 
 .petit-titre {
-    color: #7c5cff;
+    color: #9b7ebd;
+
     font-weight: bold;
-    letter-spacing: 3px;
+
+    letter-spacing: 4px;
+
     margin-bottom: 20px;
 }
 
 .accueil h1 {
     font-size: 60px;
-    margin-bottom: 15px;
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+
+    color: #302a35;
 }
 
 .accueil h1 span {
-    color: #7c5cff;
+    color: #9b7ebd;
 }
 
 .accueil h2 {
     font-size: 28px;
+
     margin-bottom: 25px;
-    color: #cccccc;
+
+    color: #6f568a;
 }
 
 .accueil p {
     font-size: 18px;
+
     line-height: 1.7;
-    color: #bdbdbd;
+
+    color: #665d6d;
+
+    max-width: 650px;
 }
 
 
-/* Boutons */
+/* =========================
+   BOUTONS
+========================= */
 
 .boutons {
     display: flex;
+
     gap: 15px;
+
     margin-top: 35px;
 }
 
 .bouton {
+    display: inline-block;
+
     padding: 14px 25px;
-    background-color: #7c5cff;
+
+    background-color: #9b7ebd;
+
     color: white;
+
     text-decoration: none;
-    border-radius: 8px;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
 }
 
 .bouton:hover {
-    opacity: 0.8;
+    background-color: #80649e;
+
+    transform: translateY(-2px);
 }
 
 .bouton.secondaire {
     background-color: transparent;
-    border: 1px solid #7c5cff;
+
+    color: #6f568a;
+
+    border: 1px solid #c9b6e4;
+}
+
+.bouton.secondaire:hover {
+    background-color: #e8ddf5;
 }
 
 
-/* Sections */
+/* =========================
+   SECTIONS
+========================= */
 
 section:not(.accueil) {
     min-height: 60vh;
-    padding: 100px 10%;
+
+    padding: 110px 10%;
+
+    background-color: #ffffff;
+}
+
+section:nth-of-type(even) {
+    background-color: #faf8fc;
 }
 
 section h2 {
     font-size: 40px;
+
     margin-bottom: 30px;
+
+    color: #6f568a;
 }
 
 section p {
     font-size: 18px;
+
     line-height: 1.7;
-    color: #cccccc;
+
+    color: #665d6d;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        padding: 0 5%;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .accueil {
+        padding: 120px 7% 80px;
+    }
+
+    .accueil h1 {
+        font-size: 42px;
+    }
+
+    .accueil h2 {
+        font-size: 22px;
+    }
+
+    .accueil p {
+        font-size: 16px;
+    }
+
+    .boutons {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    section:not(.accueil) {
+        padding: 90px 7%;
+    }
+
+    section h2 {
+        font-size: 32px;
+    }
 }
