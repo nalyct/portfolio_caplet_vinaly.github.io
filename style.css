@@ -14,8 +14,8 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #faf8fc;
-    color: #302a35;
+    background-color: #F3F0EE;
+    color: #1D1B1D;
 }
 
 
@@ -35,9 +35,9 @@ nav {
 
     padding: 0 8%;
 
-    background-color: rgba(250, 248, 252, 0.92);
+    background-color: rgba(243, 240, 238, 0.92);
 
-    border-bottom: 1px solid #eee7f4;
+    border-bottom: 1px solid #C9BCB8;
 
     z-index: 1000;
 }
@@ -45,7 +45,7 @@ nav {
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #6f568a;
+    color: #504747;
 }
 
 nav ul {
@@ -55,14 +55,14 @@ nav ul {
 }
 
 nav a {
-    color: #4b4252;
+    color: #504747;
     text-decoration: none;
     font-size: 15px;
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: #9b7ebd;
+    color: #978B86;
 }
 
 
@@ -81,10 +81,10 @@ nav a:hover {
     background:
         radial-gradient(
             circle at 85% 30%,
-            #e8ddf5 0%,
+            #DED3CF 0%,
             transparent 30%
         ),
-        #faf8fc;
+        #F3F0EE;
 }
 
 .accueil-contenu {
@@ -92,7 +92,7 @@ nav a:hover {
 }
 
 .petit-titre {
-    color: #9b7ebd;
+    color: #978B86;
 
     font-weight: bold;
 
@@ -108,11 +108,11 @@ nav a:hover {
 
     margin-bottom: 20px;
 
-    color: #302a35;
+    color: #1D1B1D;
 }
 
 .accueil h1 span {
-    color: #9b7ebd;
+    color: #978B86;
 }
 
 .accueil h2 {
@@ -120,7 +120,7 @@ nav a:hover {
 
     margin-bottom: 25px;
 
-    color: #6f568a;
+    color: #504747;
 }
 
 .accueil p {
@@ -128,7 +128,7 @@ nav a:hover {
 
     line-height: 1.7;
 
-    color: #665d6d;
+    color: #75645F;
 
     max-width: 650px;
 }
@@ -151,9 +151,9 @@ nav a:hover {
 
     padding: 14px 25px;
 
-    background-color: #9b7ebd;
+    background-color: #978B86;
 
-    color: white;
+    color: #FFFFFF;
 
     text-decoration: none;
 
@@ -165,7 +165,7 @@ nav a:hover {
 }
 
 .bouton:hover {
-    background-color: #80649e;
+    background-color: #504747;
 
     transform: translateY(-2px);
 }
@@ -173,13 +173,13 @@ nav a:hover {
 .bouton.secondaire {
     background-color: transparent;
 
-    color: #6f568a;
+    color: #504747;
 
-    border: 1px solid #c9b6e4;
+    border: 1px solid #C9BCB8;
 }
 
 .bouton.secondaire:hover {
-    background-color: #e8ddf5;
+    background-color: #DED3CF;
 }
 
 
@@ -192,11 +192,11 @@ section:not(.accueil) {
 
     padding: 110px 10%;
 
-    background-color: #ffffff;
+    background-color: #FFFFFF;
 }
 
 section:nth-of-type(even) {
-    background-color: #faf8fc;
+    background-color: #F3F0EE;
 }
 
 section h2 {
@@ -204,7 +204,7 @@ section h2 {
 
     margin-bottom: 30px;
 
-    color: #6f568a;
+    color: #504747;
 }
 
 section p {
@@ -212,13 +212,117 @@ section p {
 
     line-height: 1.7;
 
-    color: #665d6d;
+    color: #75645F;
+}
+
+
+/* =========================
+   DÉCORATION ACCUEIL
+========================= */
+
+.accueil {
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.accueil-decoration {
+    position: relative;
+
+    width: 350px;
+    height: 350px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.cercle {
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    background: #DED3CF;
+
+    border-radius: 50%;
+
+    opacity: 0.8;
+}
+
+.carte-decoration {
+    position: relative;
+
+    width: 220px;
+    height: 250px;
+
+    padding: 35px 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.85);
+
+    border: 1px solid #C9BCB8;
+
+    border-radius: 25px;
+
+    box-shadow: 0 20px 50px rgba(80, 71, 71, 0.15);
+
+    transform: rotate(4deg);
+}
+
+.carte-decoration span {
+    font-size: 48px;
+
+    font-weight: bold;
+
+    color: #978B86;
+
+    margin-bottom: 15px;
+}
+
+.carte-decoration p {
+    font-size: 17px;
+
+    line-height: 1.5;
+
+    color: #504747;
 }
 
 
 /* =========================
    RESPONSIVE
 ========================= */
+
+@media (max-width: 900px) {
+
+    .accueil {
+        flex-direction: column;
+        justify-content: center;
+
+        text-align: center;
+    }
+
+    .accueil-contenu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .accueil-decoration {
+        width: 280px;
+        height: 280px;
+    }
+
+    .cercle {
+        width: 240px;
+        height: 240px;
+    }
+}
+
 
 @media (max-width: 768px) {
 
@@ -262,109 +366,5 @@ section p {
 
     section h2 {
         font-size: 32px;
-    }
-}
-/* =========================
-   DÉCORATION ACCUEIL
-========================= */
-
-.accueil {
-    justify-content: space-between;
-    gap: 60px;
-}
-
-.accueil-decoration {
-    position: relative;
-
-    width: 350px;
-    height: 350px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    flex-shrink: 0;
-}
-
-.cercle {
-    position: absolute;
-
-    width: 300px;
-    height: 300px;
-
-    background: #e8ddf5;
-
-    border-radius: 50%;
-
-    opacity: 0.8;
-}
-
-.carte-decoration {
-    position: relative;
-
-    width: 220px;
-    height: 250px;
-
-    padding: 35px 30px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    background: rgba(255, 255, 255, 0.85);
-
-    border: 1px solid #e2d5ed;
-
-    border-radius: 25px;
-
-    box-shadow: 0 20px 50px rgba(111, 86, 138, 0.15);
-
-    transform: rotate(4deg);
-}
-
-.carte-decoration span {
-    font-size: 48px;
-
-    font-weight: bold;
-
-    color: #9b7ebd;
-
-    margin-bottom: 15px;
-}
-
-.carte-decoration p {
-    font-size: 17px;
-
-    line-height: 1.5;
-
-    color: #6f568a;
-}
-
-
-/* Adaptation téléphone */
-
-@media (max-width: 900px) {
-
-    .accueil {
-        flex-direction: column;
-        justify-content: center;
-
-        text-align: center;
-    }
-
-    .accueil-contenu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .accueil-decoration {
-        width: 280px;
-        height: 280px;
-    }
-
-    .cercle {
-        width: 240px;
-        height: 240px;
     }
 }
