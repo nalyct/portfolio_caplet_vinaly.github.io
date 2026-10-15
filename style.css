@@ -189,6 +189,7 @@ section:not(.accueil) {
     padding: 110px 10%;
 
     background-color: #FFFFFF;
+   text-align: justify;
 }
 
 section:nth-of-type(even) {
