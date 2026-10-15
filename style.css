@@ -344,6 +344,7 @@ section p {
 
     section:not(.accueil) {
         padding: 90px 7%;
+    text-align: justify;
     }
 
     section h2 {
