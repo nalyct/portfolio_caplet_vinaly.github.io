@@ -419,8 +419,8 @@ section:not(.accueil) p {
 
 .projets-intro {
     max-width: 750px;
-    margin: 0 auto 45px;
-    text-align: center;
+    margin: 0 0 45px;
+    text-align: left;
 }
 
 .projets-intro .petit-titre {
@@ -439,10 +439,10 @@ section:not(.accueil) p {
 
 .projets-intro .intro-description {
     max-width: 750px;
-    margin: 0 auto;
+    margin: 0;
     color: #75645F;
     line-height: 1.8;
-    text-align: center;
+    text-align: left;
 }
 
 .grille-projets {
