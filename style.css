@@ -839,3 +839,119 @@ section:not(.accueil) p {
     }
 }
 
+/* SECTION CONTACT */
+
+.section-contact {
+    background-color: #F3F0EE;
+}
+
+.contact-intro {
+    max-width: 750px;
+    margin: 0 0 45px;
+    text-align: left;
+}
+
+.contact-intro .intro-description {
+    max-width: 750px;
+    margin: 0;
+    color: #75645F;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.grille-contact {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.carte-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 25px;
+    background-color: #FFFFFF;
+    border: 1px solid #DED3CF;
+    border-radius: 22px;
+    box-shadow: 0 5px 18px rgba(80, 71, 71, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carte-contact:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(80, 71, 71, 0.12);
+}
+
+.icone-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 18px;
+    border-radius: 15px;
+    background-color: #F3F0EE;
+    color: #75645F;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.carte-contact h3 {
+    margin: 0 0 12px;
+    color: #504747;
+    font-size: 21px;
+}
+
+.carte-contact p {
+    max-width: none;
+    margin: 0 0 22px;
+    color: #75645F;
+    font-size: 15px;
+    line-height: 1.7;
+    text-align: left;
+}
+
+.carte-contact a {
+    margin-top: auto;
+    color: #75645F;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid #C9BCB8;
+    padding-bottom: 4px;
+    transition: color 0.2s ease;
+}
+
+.carte-contact a:hover {
+    color: #504747;
+}
+
+.contact-prive {
+    display: inline-block;
+    margin-top: auto;
+    padding: 9px 13px;
+    border-radius: 20px;
+    background-color: #F3F0EE;
+    color: #75645F;
+    font-size: 13px;
+}
+
+/* Adaptation aux écrans plus petits */
+
+@media (max-width: 900px) {
+    .grille-contact {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .grille-contact {
+        grid-template-columns: 1fr;
+    }
+
+    .carte-contact {
+        padding: 25px 22px;
+    }
+}
+
+
